@@ -1,0 +1,3 @@
+[2026-04-22 15:21:47.404] [STEP ] ▶ Scroll to bottom of content container
+[2026-04-22 15:21:47.933] [STEP ] ▶ Verify pagination is visible
+[2026-04-22 15:21:47.950] [INFO ] Pagination component is visible

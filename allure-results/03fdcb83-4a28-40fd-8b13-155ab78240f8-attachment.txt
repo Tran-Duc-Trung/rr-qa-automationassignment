@@ -1,0 +1,2 @@
+[2026-04-22 15:20:19.841] [STEP ] ▶ Set From year (2024) greater than To year (2000)
+[2026-04-22 15:20:22.599] [WARN ] [NEGATIVE] From: 2024, To: 2025 — cards: 20

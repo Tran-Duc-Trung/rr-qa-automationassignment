@@ -1,0 +1,5 @@
+[2026-04-22 15:10:57.892] [STEP ] ▶ Set Year To to 2015
+[2026-04-22 15:10:59.035] [INFO ] Year To after selection: 2015
+[2026-04-22 15:10:59.047] [INFO ] Cards after Year To 2015: 20
+[2026-04-22 15:10:59.049] [STEP ] ▶ Verify all card years are <= toYear
+[2026-04-22 15:10:59.284] [INFO ] All cards have year <= 2015: true

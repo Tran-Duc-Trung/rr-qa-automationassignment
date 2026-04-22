@@ -1,0 +1,339 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: filtering\rating.spec.js >> Rating Filter >> TC-RTG-08: Rating filter combined with Genre returns filtered results
+- Location: tests\filtering\rating.spec.js:127:3
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 3
+Received: 2.5
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - link "Discover" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - paragraph [ref=e7]: Discover
+      - navigation [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10] [cursor=pointer]:
+            - link "Popular" [ref=e11]:
+              - /url: /popular
+          - listitem [ref=e12] [cursor=pointer]:
+            - link "Trend" [ref=e13]:
+              - /url: /trend
+          - listitem [ref=e14] [cursor=pointer]:
+            - link "Newest" [ref=e15]:
+              - /url: /new
+          - listitem [ref=e16] [cursor=pointer]:
+            - link "Top rated" [ref=e17]:
+              - /url: /top
+      - generic [ref=e18]:
+        - img "Search Icon" [ref=e19]
+        - textbox "SEARCH" [ref=e20]
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - img "Movie Poster" [ref=e25]
+          - paragraph [ref=e26]: Madness
+          - paragraph [ref=e27]: Thriller, 1980
+        - generic [ref=e28]:
+          - img "Movie Poster" [ref=e29]
+          - paragraph [ref=e30]: Do or Die
+          - paragraph [ref=e31]: Action, 1991
+        - generic [ref=e32]:
+          - img "Movie Poster" [ref=e33]
+          - paragraph [ref=e34]: Amazon Jail
+          - paragraph [ref=e35]: Thriller, 1982
+        - generic [ref=e36]:
+          - img "Movie Poster" [ref=e37]
+          - paragraph [ref=e38]: "Wild Agent 2: Peach Assassination"
+          - paragraph [ref=e39]: Action, 2024
+        - generic [ref=e40]:
+          - img "Movie Poster" [ref=e41]
+          - paragraph [ref=e42]: The Legendary Lighter
+          - paragraph [ref=e43]: Action, 2019
+        - generic [ref=e44]:
+          - img "Movie Poster" [ref=e45]
+          - paragraph [ref=e46]: "True Story of a Woman in Jail: Continues"
+          - paragraph [ref=e47]: Action, 1975
+        - generic [ref=e48]:
+          - img "Movie Poster" [ref=e49]
+          - paragraph [ref=e50]: Hard Hunted
+          - paragraph [ref=e51]: Action, 1992
+        - generic [ref=e52]:
+          - img "Movie Poster" [ref=e53]
+          - paragraph [ref=e54]: Batman & Robin
+          - paragraph [ref=e55]: Action, 1997
+        - generic [ref=e56]:
+          - img "Movie Poster" [ref=e57]
+          - paragraph [ref=e58]: Virgin Territory
+          - paragraph [ref=e59]: Adventure, 2007
+        - generic [ref=e60]:
+          - img "Movie Poster" [ref=e61]
+          - paragraph [ref=e62]: The Last Airbender
+          - paragraph [ref=e63]: Action, 2010
+        - generic [ref=e64]:
+          - img "Movie Poster" [ref=e65]
+          - paragraph [ref=e66]: Street Fighter
+          - paragraph [ref=e67]: Action, 1994
+        - generic [ref=e68]:
+          - img "Movie Poster" [ref=e69]
+          - paragraph [ref=e70]: "Captain Hook: The Cursed Tides"
+          - paragraph [ref=e71]: Adventure, 2025
+        - generic [ref=e72]:
+          - img "Movie Poster" [ref=e73]
+          - paragraph [ref=e74]: "Kıyma: Orman Kanunları"
+          - paragraph [ref=e75]: Comedy, 2024
+        - generic [ref=e76]:
+          - img "Movie Poster" [ref=e77]
+          - paragraph [ref=e78]: Timur
+          - paragraph [ref=e79]: Action, 2025
+        - generic [ref=e80]:
+          - img "Movie Poster" [ref=e81]
+          - paragraph [ref=e82]: Fantastic Four
+          - paragraph [ref=e83]: Action, 2015
+        - generic [ref=e84]:
+          - img "Movie Poster" [ref=e85]
+          - paragraph [ref=e86]: Catwoman
+          - paragraph [ref=e87]: Action, 2004
+        - generic [ref=e88]:
+          - img "Movie Poster" [ref=e89]
+          - paragraph [ref=e90]: Day of the Warrior
+          - paragraph [ref=e91]: Action, 1996
+        - generic [ref=e92]:
+          - img "Movie Poster" [ref=e93]
+          - paragraph [ref=e94]: Savage Beach
+          - paragraph [ref=e95]: Action, 1989
+        - generic [ref=e96]:
+          - img "Movie Poster" [ref=e97]
+          - paragraph [ref=e98]: Route 666
+          - paragraph [ref=e99]: Horror, 2001
+        - generic [ref=e100]:
+          - img "Movie Poster" [ref=e101]
+          - paragraph [ref=e102]: Warat
+          - paragraph [ref=e103]: Drama, 2026
+      - list [ref=e105]:
+        - listitem [ref=e106]:
+          - button "Previous page" [disabled] [ref=e107]: Previous
+        - listitem [ref=e108]:
+          - button "Page 1 is your current page" [ref=e109]: "1"
+        - listitem [ref=e110]:
+          - button "Page 2" [ref=e111]: "2"
+        - listitem [ref=e112]:
+          - button "Page 3" [ref=e113]: "3"
+        - listitem [ref=e114]:
+          - button "Page 4" [ref=e115]: "4"
+        - listitem [ref=e116]:
+          - button "..." [ref=e117]
+        - listitem [ref=e118]:
+          - button "Page 470" [ref=e119]: "470"
+        - listitem [ref=e120]:
+          - button "Page 471" [ref=e121]: "471"
+        - listitem [ref=e122]:
+          - button "Page 472" [ref=e123]: "472"
+        - listitem [ref=e124]:
+          - button "Next page" [ref=e125]: Next
+  - complementary [ref=e126]:
+    - paragraph [ref=e127]: DISCOVER OPTIONS
+    - generic [ref=e128]:
+      - paragraph [ref=e129]: Type
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - generic [ref=e134]: Movie
+          - textbox [ref=e137]
+        - img [ref=e141]
+      - paragraph [ref=e143]: Genre
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]: Action
+            - img [ref=e151]
+          - textbox [ref=e155]
+        - generic [ref=e156]:
+          - img [ref=e158]
+          - img [ref=e162]
+      - paragraph [ref=e164]: Year
+      - generic [ref=e165]:
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - generic [ref=e170]: "1900"
+            - textbox [ref=e173]
+          - img [ref=e177]
+        - generic [ref=e179]: "-"
+        - generic [ref=e182]:
+          - generic [ref=e183]:
+            - generic [ref=e184]: "2025"
+            - textbox [ref=e187]
+          - img [ref=e191]
+      - paragraph [ref=e193]: Ratings
+      - radiogroup [ref=e194]:
+        - listitem [ref=e195] [cursor=pointer]:
+          - radio "★ ★" [checked] [ref=e196]:
+            - generic [ref=e197]: ★
+            - generic [ref=e198]: ★
+        - listitem [ref=e199] [cursor=pointer]:
+          - radio "★ ★" [checked] [ref=e200]:
+            - generic [ref=e201]: ★
+            - generic [ref=e202]: ★
+        - listitem [ref=e203] [cursor=pointer]:
+          - radio "★ ★" [checked] [active] [ref=e204]:
+            - generic [ref=e205]: ★
+            - generic [ref=e206]: ★
+        - listitem [ref=e207] [cursor=pointer]:
+          - radio "★ ★" [ref=e208]:
+            - generic [ref=e209]: ★
+            - generic [ref=e210]: ★
+        - listitem [ref=e211] [cursor=pointer]:
+          - radio "★ ★" [ref=e212]:
+            - generic [ref=e213]: ★
+            - generic [ref=e214]: ★
+      - text: "& up"
+```
+
+# Test source
+
+```ts
+  44  |     logger.step('Click 3rd star (full)');
+  45  |     await homePage.setRating(3);
+  46  | 
+  47  |     logger.step('Verify 3 stars are in full state');
+  48  |     const rating = await homePage.getCurrentRating();
+  49  |     logger.info(`Rating after clicking 3rd star: ${rating}`);
+  50  |     expect(rating).toBe(3);
+  51  | 
+  52  |     logger.step('Verify cards are loaded');
+  53  |     const cardCount = await homePage.getCardCount();
+  54  |     logger.info(`Cards with rating >= 3: ${cardCount}`);
+  55  |     expect(cardCount).toBeGreaterThan(0);
+  56  |   });
+  57  | 
+  58  |   // ── TC-RTG-04 ──────────────────────────────────────────────────────────────
+  59  |   test('TC-RTG-04: Half-star rating (2.5) is selectable', async () => {
+  60  |     logger.step('Click left half of 3rd star to set 2.5 rating');
+  61  |     await homePage.setRating(2.5);
+  62  | 
+  63  |     const rating = await homePage.getCurrentRating();
+  64  |     logger.info(`Rating after clicking half star: ${rating}`);
+  65  |     expect(rating).toBe(2.5);
+  66  | 
+  67  |     const cardCount = await homePage.getCardCount();
+  68  |     logger.info(`Cards with rating >= 2.5: ${cardCount}`);
+  69  |     expect(cardCount).toBeGreaterThan(0);
+  70  |   });
+  71  | 
+  72  |   // ── TC-RTG-05 ──────────────────────────────────────────────────────────────
+  73  |   test('TC-RTG-05: Setting rating 5 (max) returns results', async () => {
+  74  |     logger.step('Set maximum rating of 5 stars');
+  75  |     await homePage.setRating(5);
+  76  | 
+  77  |     const rating = await homePage.getCurrentRating();
+  78  |     logger.info(`Max rating set: ${rating}`);
+  79  |     expect(rating).toBe(5);
+  80  | 
+  81  |     const cardCount = await homePage.getCardCount();
+  82  |     logger.info(`Cards with rating = 5: ${cardCount}`);
+  83  |     // Could be 0 if nothing is rated exactly 5; just verify no crash
+  84  |     expect(cardCount).toBeGreaterThanOrEqual(0);
+  85  | 
+  86  |     await homePage.page.screenshot({
+  87  |       path: 'test-results/screenshots/tc-rtg-05-max-rating.png',
+  88  |     });
+  89  |   });
+  90  | 
+  91  |   // ── TC-RTG-06 ──────────────────────────────────────────────────────────────
+  92  |   test('TC-RTG-06: Setting rating 1 (min) returns max results', async () => {
+  93  |     logger.step('Set minimum rating of 1 star');
+  94  |     await homePage.setRating(1);
+  95  | 
+  96  |     const rating = await homePage.getCurrentRating();
+  97  |     expect(rating).toBe(1);
+  98  | 
+  99  |     const minRatingCount = await homePage.getCardCount();
+  100 |     logger.info(`Cards with rating >= 1: ${minRatingCount}`);
+  101 | 
+  102 |     logger.step('Set rating to 5 and compare — should have fewer or equal results');
+  103 |     await homePage.setRating(5);
+  104 |     const maxRatingCount = await homePage.getCardCount();
+  105 |     logger.info(`Cards with rating >= 5: ${maxRatingCount}`);
+  106 | 
+  107 |     expect(maxRatingCount).toBeLessThanOrEqual(minRatingCount);
+  108 |   });
+  109 | 
+  110 |   // ── TC-RTG-07 ──────────────────────────────────────────────────────────────
+  111 |   test('TC-RTG-07: All valid rating values (1–5 including halves) can be set', async () => {
+  112 |     const validRatings = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
+  113 | 
+  114 |     for (const rating of validRatings) {
+  115 |       logger.step(`Set rating to ${rating}`);
+  116 |       await homePage.setRating(rating);
+  117 | 
+  118 |       const current = await homePage.getCurrentRating();
+  119 |       logger.info(`Rating set: ${rating}, current: ${current}`);
+  120 |       expect(current).toBe(rating);
+  121 | 
+  122 |       await homePage.page.waitForTimeout(300);
+  123 |     }
+  124 |   });
+  125 | 
+  126 |   // ── TC-RTG-08 ──────────────────────────────────────────────────────────────
+  127 |   test('TC-RTG-08: Rating filter combined with Genre returns filtered results', async () => {
+  128 |     const { GENRES } = await import('../../pages/HomePage.js');
+  129 | 
+  130 |     logger.step('Select "Action" genre');
+  131 |     await homePage.selectGenre(GENRES.ACTION);
+  132 | 
+  133 |     logger.step('Set rating to 3');
+  134 |     await homePage.setRating(3);
+  135 | 
+  136 |     const cardCount = await homePage.getCardCount();
+  137 |     logger.info(`Cards for Action genre + rating >= 3: ${cardCount}`);
+  138 |     expect(cardCount).toBeGreaterThanOrEqual(0);
+  139 | 
+  140 |     const genre  = await homePage.getSelectedGenre();
+  141 |     const rating = await homePage.getCurrentRating();
+  142 |     logger.info(`Active filters — Genre: "${genre}", Rating: ${rating}`);
+  143 |     expect(genre).toBe(GENRES.ACTION.label);
+> 144 |     expect(rating).toBe(3);
+      |                    ^ Error: expect(received).toBe(expected) // Object.is equality
+  145 |   });
+  146 | 
+  147 |   // ── TC-RTG-09 (API) ────────────────────────────────────────────────────────
+  148 |   test('TC-RTG-09: Setting rating triggers API call with vote_average param', async () => {
+  149 |     logger.step('Capture API call when setting rating to 4');
+  150 | 
+  151 |     const calls = await homePage.collectApiCalls(async () => {
+  152 |       await homePage.setRating(4);
+  153 |     });
+  154 | 
+  155 |     expect(calls.length).toBeGreaterThan(0);
+  156 |     const firstCall = calls[0];
+  157 |     logger.info(`API URL: ${firstCall.url.href}`);
+  158 | 
+  159 |     const params = firstCall.url.searchParams;
+  160 |     const hasRatingParam =
+  161 |       params.has('vote_average.gte') ||
+  162 |       params.has('rating');
+  163 | 
+  164 |     logger.info(`API has rating param: ${hasRatingParam}`);
+  165 |     logger.info(`All params: ${params.toString()}`);
+  166 | 
+  167 |     await homePage.page.screenshot({
+  168 |       path: 'test-results/screenshots/tc-rtg-09-api-rating.png',
+  169 |     });
+  170 |   });
+  171 | });
+```

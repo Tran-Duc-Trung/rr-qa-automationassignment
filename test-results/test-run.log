@@ -1,0 +1,41 @@
+[2026-04-22 15:21:47.404] [STEP ] ▶ Scroll to bottom of content container
+[2026-04-22 15:21:47.933] [STEP ] ▶ Verify pagination is visible
+[2026-04-22 15:21:47.950] [INFO ] Pagination component is visible
+[2026-04-22 15:21:55.830] [STEP ] ▶ Verify current page is "1"
+[2026-04-22 15:21:55.840] [INFO ] Current page: 1
+[2026-04-22 15:21:55.841] [STEP ] ▶ Verify "Previous" button is disabled on page 1
+[2026-04-22 15:21:55.847] [INFO ] Previous disabled: true
+[2026-04-22 15:22:02.728] [STEP ] ▶ Verify "Next" button is enabled on page 1
+[2026-04-22 15:22:02.733] [INFO ] Next disabled: false
+[2026-04-22 15:22:09.465] [STEP ] ▶ Capture card titles on page 1
+[2026-04-22 15:22:09.653] [STEP ] ▶ Click Next button
+[2026-04-22 15:22:10.589] [STEP ] ▶ Verify current page is now "2"
+[2026-04-22 15:22:11.119] [INFO ] After clicking Next — current page: 2
+[2026-04-22 15:22:11.120] [STEP ] ▶ Verify content has changed
+[2026-04-22 15:22:11.287] [INFO ] Page 2 shows different content: true
+[2026-04-22 15:22:17.930] [STEP ] ▶ Navigate to page 2
+[2026-04-22 15:22:19.352] [STEP ] ▶ Verify "Previous" is now enabled
+[2026-04-22 15:22:19.357] [INFO ] Previous disabled on page 2: false
+[2026-04-22 15:22:25.610] [STEP ] ▶ Navigate to page 2
+[2026-04-22 15:22:26.511] [STEP ] ▶ Click Previous to return to page 1
+[2026-04-22 15:22:27.613] [INFO ] After clicking Previous — current page: 1
+[2026-04-22 15:22:27.615] [STEP ] ▶ Verify Previous is disabled again on page 1
+[2026-04-22 15:22:43.613] [STEP ] ▶ Click page 3 directly
+[2026-04-22 15:22:45.038] [INFO ] After clicking page 3 — current page: 3
+[2026-04-22 15:22:59.883] [STEP ] ▶ Verify pagination break (...) is present
+[2026-04-22 15:22:59.888] [INFO ] Pagination break visible: true
+[2026-04-22 15:23:06.296] [STEP ] ▶ Count cards on page 1
+[2026-04-22 15:23:06.302] [INFO ] Cards on page 1: 20
+[2026-04-22 15:23:06.304] [STEP ] ▶ Navigate to page 2 and count cards
+[2026-04-22 15:23:07.096] [INFO ] Cards on page 2: 20
+[2026-04-22 15:23:19.733] [STEP ] ▶ Navigate to page 2
+[2026-04-22 15:23:21.046] [STEP ] ▶ Apply a Genre filter
+[2026-04-22 15:23:22.003] [STEP ] ▶ Verify pagination has reset to page 1
+[2026-04-22 15:23:22.526] [INFO ] Page after filter change: 1
+[2026-04-22 15:23:31.060] [STEP ] ▶ Capture last page number from pagination
+[2026-04-22 15:23:31.064] [INFO ] Last page number shown: 56316
+[2026-04-22 15:23:31.065] [STEP ] ▶ Attempt to click the last page number
+[2026-04-22 15:23:33.129] [WARN ] [KNOWN BUG] Cards on last page: 0
+[2026-04-22 15:23:46.845] [STEP ] ▶ Capture API call when navigating to page 2
+[2026-04-22 15:23:47.641] [INFO ] API URL: https://api.themoviedb.org/3/movie/popular?page=2&api_key=add494e96808c55b3ee7f940c9d5e5b6
+[2026-04-22 15:23:47.643] [INFO ] API page param: 2

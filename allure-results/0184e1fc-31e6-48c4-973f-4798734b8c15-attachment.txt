@@ -1,0 +1,4 @@
+[2026-04-22 03:39:30.789] [STEP ] ▶ Select "Action" genre
+[2026-04-22 03:39:31.207] [STEP ] ▶ Set rating to 3
+[2026-04-22 03:39:32.119] [INFO ] Cards for Action genre + rating >= 3: 20
+[2026-04-22 03:39:32.144] [INFO ] Active filters — Genre: "Action", Rating: 2.5

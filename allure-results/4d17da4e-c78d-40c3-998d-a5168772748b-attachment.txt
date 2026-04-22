@@ -1,0 +1,2 @@
+[2026-04-22 15:22:59.883] [STEP ] ▶ Verify pagination break (...) is present
+[2026-04-22 15:22:59.888] [INFO ] Pagination break visible: true

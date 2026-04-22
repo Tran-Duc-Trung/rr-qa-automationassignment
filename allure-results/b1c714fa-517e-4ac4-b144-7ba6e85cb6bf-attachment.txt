@@ -1,0 +1,6 @@
+[2026-04-22 15:22:09.465] [STEP ] ▶ Capture card titles on page 1
+[2026-04-22 15:22:09.653] [STEP ] ▶ Click Next button
+[2026-04-22 15:22:10.589] [STEP ] ▶ Verify current page is now "2"
+[2026-04-22 15:22:11.119] [INFO ] After clicking Next — current page: 2
+[2026-04-22 15:22:11.120] [STEP ] ▶ Verify content has changed
+[2026-04-22 15:22:11.287] [INFO ] Page 2 shows different content: true

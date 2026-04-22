@@ -1,0 +1,2 @@
+[2026-04-21 04:38:55.125] [STEP ] ▶ Click through each tab and verify only one is active
+[2026-04-21 04:38:55.203] [STEP ] ▶ Active tab: Popular

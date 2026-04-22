@@ -1,0 +1,202 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: ui\filter.spec.js >> Filter Functionality >> Category Filter >> should load content for newest category
+- Location: tests\ui\filter.spec.js:20:13
+
+# Error details
+
+```
+TypeError: homePage.waitForPageLoad is not a function
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - link "Discover" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - paragraph [ref=e7]: Discover
+      - navigation [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10] [cursor=pointer]:
+            - link "Popular" [ref=e11]:
+              - /url: /popular
+          - listitem [ref=e12] [cursor=pointer]:
+            - link "Trend" [ref=e13]:
+              - /url: /trend
+          - listitem [ref=e14] [cursor=pointer]:
+            - link "Newest" [ref=e15]:
+              - /url: /new
+          - listitem [ref=e16] [cursor=pointer]:
+            - link "Top rated" [ref=e17]:
+              - /url: /top
+      - generic [ref=e18]:
+        - img "Search Icon" [ref=e19]
+        - textbox "SEARCH" [ref=e20]
+    - img "audio-loading" [ref=e24]
+  - complementary [ref=e28]:
+    - paragraph [ref=e29]: DISCOVER OPTIONS
+    - generic [ref=e30]:
+      - paragraph [ref=e31]: Type
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: Movie
+          - textbox [ref=e39]
+        - img [ref=e43]
+      - paragraph [ref=e45]: Genre
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: Select...
+          - textbox [ref=e53]
+        - img [ref=e57]
+      - paragraph [ref=e59]: Year
+      - generic [ref=e60]:
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - generic [ref=e65]: "1900"
+            - textbox [ref=e68]
+          - img [ref=e72]
+        - generic [ref=e74]: "-"
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: "2025"
+            - textbox [ref=e82]
+          - img [ref=e86]
+      - paragraph [ref=e88]: Ratings
+      - radiogroup [ref=e89]:
+        - listitem [ref=e90] [cursor=pointer]:
+          - radio "★ ★" [ref=e91]:
+            - generic [ref=e92]: ★
+            - generic [ref=e93]: ★
+        - listitem [ref=e94] [cursor=pointer]:
+          - radio "★ ★" [ref=e95]:
+            - generic [ref=e96]: ★
+            - generic [ref=e97]: ★
+        - listitem [ref=e98] [cursor=pointer]:
+          - radio "★ ★" [ref=e99]:
+            - generic [ref=e100]: ★
+            - generic [ref=e101]: ★
+        - listitem [ref=e102] [cursor=pointer]:
+          - radio "★ ★" [ref=e103]:
+            - generic [ref=e104]: ★
+            - generic [ref=e105]: ★
+        - listitem [ref=e106] [cursor=pointer]:
+          - radio "★ ★" [ref=e107]:
+            - generic [ref=e108]: ★
+            - generic [ref=e109]: ★
+      - text: "& up"
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect } from '@playwright/test';
+  2   | import { HomePage } from '../../pages/HomePage.js';
+  3   | import logger from '../../utils/logger.js';
+  4   | import { filterData } from '../../test-data/filterData.js';
+  5   | 
+  6   | test.describe('Filter Functionality', () => {
+  7   | 
+  8   |     let homePage;
+  9   | 
+  10  |     test.beforeEach(async ({ page }) => {
+  11  |         homePage = new HomePage(page);
+  12  |         await homePage.navigate('/');
+> 13  |         await homePage.waitForPageLoad();
+      |                        ^ TypeError: homePage.waitForPageLoad is not a function
+  14  |     });
+  15  | 
+  16  |     // Category Tests
+  17  |     test.describe('Category Filter', () => {
+  18  | 
+  19  |         ['popular', 'trending', 'newest', 'topRated'].forEach(category => {
+  20  |             test(`should load content for ${category} category`, async () => {
+  21  |                 logger.info(`Testing category: ${category}`);
+  22  | 
+  23  |                 await homePage.selectCategory(category);
+  24  | 
+  25  |                 const count = await homePage.getMovieCount();
+  26  |                 expect(count).toBeGreaterThan(0);
+  27  |             });
+  28  |         });
+  29  | 
+  30  |         test('should update content when switching categories', async () => {
+  31  |             await homePage.selectCategory('popular');
+  32  |             const popularTitles = await homePage.getMovieTitles();
+  33  | 
+  34  |             await homePage.selectCategory('topRated');
+  35  |             const topRatedTitles = await homePage.getMovieTitles();
+  36  | 
+  37  |             expect(popularTitles).not.toEqual(topRatedTitles);
+  38  |         });
+  39  |     });
+  40  | 
+  41  |     // Type Filter Tests
+  42  |     test.describe('Type Filter', () => {
+  43  | 
+  44  |         test('should show only movies when Movies selected', async () => {
+  45  |             logger.info('Testing Movies type filter');
+  46  | 
+  47  |             await homePage.selectType('movies');
+  48  | 
+  49  |             const count = await homePage.getMovieCount();
+  50  |             expect(count).toBeGreaterThan(0);
+  51  |             // Verify không có TV Show trong kết quả
+  52  |         });
+  53  | 
+  54  |         test('should show only TV shows when TV Shows selected', async () => {
+  55  |             logger.info('Testing TV Shows type filter');
+  56  | 
+  57  |             await homePage.selectType('tvShows');
+  58  | 
+  59  |             const count = await homePage.getMovieCount();
+  60  |             expect(count).toBeGreaterThan(0);
+  61  |         });
+  62  | 
+  63  |         test('should update results when combining Type + Category', async () => {
+  64  |             await homePage.selectCategory('trending');
+  65  |             await homePage.selectType('movies');
+  66  | 
+  67  |             const count = await homePage.getMovieCount();
+  68  |             expect(count).toBeGreaterThan(0);
+  69  |         });
+  70  |     });
+  71  | 
+  72  |     // Search Tests
+  73  |     test.describe('Title Search', () => {
+  74  | 
+  75  |         filterData.validSearchTerms.forEach(({ term, shouldFind }) => {
+  76  |             test(`should find results for "${term}"`, async () => {
+  77  |                 await homePage.searchByTitle(term);
+  78  | 
+  79  |                 if (shouldFind) {
+  80  |                     const count = await homePage.getMovieCount();
+  81  |                     expect(count).toBeGreaterThan(0);
+  82  |                 } else {
+  83  |                     await expect(homePage.noResultsMsg).toBeVisible();
+  84  |                 }
+  85  |             });
+  86  |         });
+  87  | 
+  88  |         test('should show no results for invalid search', async () => {
+  89  |             await homePage.searchByTitle('xyzxyzxyz123456');
+  90  |             await expect(homePage.noResultsMsg).toBeVisible();
+  91  |         });
+  92  | 
+  93  |         test('should handle special characters in search', async () => {
+  94  |             await homePage.searchByTitle('!@#$%^&*()');
+  95  |             // Không crash, hiển thị no results hoặc empty state
+  96  |             const title = await homePage.getTitle();
+  97  |             expect(title).toBeTruthy();
+  98  |         });
+  99  |     });
+  100 | });
+```

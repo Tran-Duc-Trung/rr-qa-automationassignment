@@ -1,0 +1,4 @@
+[2026-04-22 15:21:55.830] [STEP ] ▶ Verify current page is "1"
+[2026-04-22 15:21:55.840] [INFO ] Current page: 1
+[2026-04-22 15:21:55.841] [STEP ] ▶ Verify "Previous" button is disabled on page 1
+[2026-04-22 15:21:55.847] [INFO ] Previous disabled: true

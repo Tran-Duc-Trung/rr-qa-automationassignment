@@ -1,0 +1,2 @@
+[2026-04-21 15:43:48.237] [STEP ] ▶ Navigate directly to /popular slug
+[2026-04-21 15:43:50.471] [WARN ] [KNOWN BUG] Direct slug /popular — cards rendered: 0

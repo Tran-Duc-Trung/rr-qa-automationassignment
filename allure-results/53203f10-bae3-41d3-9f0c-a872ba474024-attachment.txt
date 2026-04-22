@@ -1,0 +1,2 @@
+[2026-04-21 16:18:57.828] [STEP ] ▶ Verify Genre dropdown shows placeholder text
+[2026-04-21 16:18:57.844] [INFO ] Genre placeholder verified

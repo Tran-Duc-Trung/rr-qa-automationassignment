@@ -1,0 +1,2 @@
+[2026-04-22 03:36:29.243] [STEP ] ▶ Set maximum rating of 5 stars
+[2026-04-22 03:36:30.166] [INFO ] Max rating set: 4.5

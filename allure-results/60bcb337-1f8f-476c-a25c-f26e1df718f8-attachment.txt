@@ -1,0 +1,5 @@
+[2026-04-22 04:21:30.344] [STEP ] ▶ Capture initial card count
+[2026-04-22 04:21:30.348] [STEP ] ▶ Search for a keyword
+[2026-04-22 04:21:30.420] [INFO ] Filtered count: 20
+[2026-04-22 04:21:30.420] [STEP ] ▶ Clear the search input
+[2026-04-22 04:21:30.460] [INFO ] Restored count: 20, initial was: 20

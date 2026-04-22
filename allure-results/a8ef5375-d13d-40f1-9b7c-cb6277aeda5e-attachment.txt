@@ -1,0 +1,2 @@
+[2026-04-22 04:51:13.631] [STEP ] ▶ Set Year From to 2020
+[2026-04-22 04:51:34.148] [INFO ] Year From after selection: 2025

@@ -1,0 +1,4 @@
+[2026-04-22 04:47:44.347] [STEP ] ▶ Intercept API call when switching to TV Shows
+[2026-04-22 04:47:44.699] [INFO ] API calls captured: 1
+[2026-04-22 04:47:44.700] [INFO ] API URL: https://api.themoviedb.org/3/tv/popular?page=1&api_key=add494e96808c55b3ee7f940c9d5e5b6
+[2026-04-22 04:47:44.700] [INFO ] TV endpoint called: true

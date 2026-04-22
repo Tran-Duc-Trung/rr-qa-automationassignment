@@ -1,0 +1,4 @@
+[2026-04-22 04:13:17.996] [STEP ] ▶ Set minimum rating of 1 star
+[2026-04-22 04:13:18.991] [INFO ] Cards with rating >= 1: 20
+[2026-04-22 04:13:18.991] [STEP ] ▶ Set rating to 5 and compare — should have fewer or equal results
+[2026-04-22 04:13:20.433] [INFO ] Cards with rating >= 5: 20

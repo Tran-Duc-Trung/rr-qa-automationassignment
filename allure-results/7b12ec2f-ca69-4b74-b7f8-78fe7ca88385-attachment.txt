@@ -1,0 +1,4 @@
+[2026-04-22 04:14:02.440] [STEP ] ▶ Capture API call when setting rating to 4
+[2026-04-22 04:14:02.829] [INFO ] API URL: https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&release_date.gte=1900-01-01&release_date.lte=2026-12-31&vote_average.gte=4&vote_average.lte=5&page=1&with_genres=&api_key=add494e96808c55b3ee7f940c9d5e5b6
+[2026-04-22 04:14:02.832] [INFO ] API has rating param: true
+[2026-04-22 04:14:02.833] [INFO ] All params: sort_by=popularity.desc&release_date.gte=1900-01-01&release_date.lte=2026-12-31&vote_average.gte=4&vote_average.lte=5&page=1&with_genres=&api_key=add494e96808c55b3ee7f940c9d5e5b6

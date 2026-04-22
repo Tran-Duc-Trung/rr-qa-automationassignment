@@ -1,0 +1,2 @@
+[2026-04-22 03:38:27.509] [STEP ] ▶ Set rating to 1
+[2026-04-22 03:38:27.919] [INFO ] Rating set: 1, current: 0.5

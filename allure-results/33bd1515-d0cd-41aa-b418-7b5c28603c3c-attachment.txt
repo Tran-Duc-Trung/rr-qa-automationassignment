@@ -1,0 +1,2 @@
+[2026-04-22 04:21:57.637] [STEP ] ▶ Search with partial keyword: "Ava"
+[2026-04-22 04:21:57.710] [INFO ] Results for partial "Ava": 20

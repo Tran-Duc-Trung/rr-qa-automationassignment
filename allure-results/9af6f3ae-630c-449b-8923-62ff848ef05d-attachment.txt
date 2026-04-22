@@ -1,0 +1,6 @@
+[2026-04-22 04:47:10.711] [STEP ] ▶ Capture card data with Movie type
+[2026-04-22 04:47:10.929] [STEP ] ▶ Select "TV Shows" from Type dropdown
+[2026-04-22 04:47:11.403] [STEP ] ▶ Verify selected type is now "TV Shows"
+[2026-04-22 04:47:11.408] [INFO ] Selected type after change: "TV Shows"
+[2026-04-22 04:47:11.410] [STEP ] ▶ Verify content has changed
+[2026-04-22 04:47:11.647] [INFO ] TV Shows shows different content from Movie: true

@@ -1,0 +1,5 @@
+[2026-04-21 04:14:29.728] [STEP ] ▶ Capture card titles on Popular tab
+[2026-04-21 04:14:29.914] [STEP ] ▶ Click Trend tab
+[2026-04-21 04:14:30.794] [STEP ] ▶ Verify Trend tab is now active
+[2026-04-21 04:14:30.802] [STEP ] ▶ Verify content has changed
+[2026-04-21 04:14:30.956] [INFO ] Trend tab shows different content: true

@@ -1,0 +1,3 @@
+[2026-04-21 17:35:17.070] [STEP ] ▶ Select "Comedy" genre
+[2026-04-21 17:35:18.299] [STEP ] ▶ Select "Horror" genre
+[2026-04-21 17:35:19.428] [INFO ] Horror shows different content from Comedy: true

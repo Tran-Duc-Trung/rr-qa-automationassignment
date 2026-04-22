@@ -1,0 +1,4 @@
+[2026-04-22 03:35:36.253] [STEP ] ▶ Verify rating widget is visible
+[2026-04-22 03:35:36.291] [STEP ] ▶ Verify 5 star items are present
+[2026-04-22 03:35:36.299] [STEP ] ▶ Verify "& up" label is visible
+[2026-04-22 03:35:36.309] [INFO ] Rating widget with 5 stars confirmed

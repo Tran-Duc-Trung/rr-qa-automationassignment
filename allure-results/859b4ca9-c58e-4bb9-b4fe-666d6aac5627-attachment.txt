@@ -1,0 +1,1 @@
+[2026-04-22 03:36:57.820] [STEP ] ▶ Set minimum rating of 1 star

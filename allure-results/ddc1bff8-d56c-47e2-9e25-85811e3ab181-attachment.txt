@@ -1,0 +1,11 @@
+[2026-04-22 02:47:00.611] [STEP ] ▶ Select genre: Action
+[2026-04-22 02:47:01.130] [INFO ] Genre "Action" chip visible in control ✅
+[2026-04-22 02:47:01.438] [STEP ] ▶ Select genre: Adventure
+[2026-04-22 02:47:01.883] [INFO ] Genre "Adventure" chip visible in control ✅
+[2026-04-22 02:47:02.185] [STEP ] ▶ Select genre: Animation
+[2026-04-22 02:47:02.629] [INFO ] Genre "Animation" chip visible in control ✅
+[2026-04-22 02:47:02.941] [STEP ] ▶ Select genre: Comedy
+[2026-04-22 02:47:03.388] [INFO ] Genre "Comedy" chip visible in control ✅
+[2026-04-22 02:47:03.699] [STEP ] ▶ Select genre: Crime
+[2026-04-22 02:47:03.824] [INFO ] Genre "Crime" chip visible in control ✅
+[2026-04-22 02:47:04.127] [STEP ] ▶ Select genre: Documentary

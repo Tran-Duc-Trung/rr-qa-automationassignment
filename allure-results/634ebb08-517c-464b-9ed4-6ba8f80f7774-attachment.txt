@@ -1,0 +1,5 @@
+[2026-04-22 04:07:08.642] [STEP ] ▶ Click 3rd star (full)
+[2026-04-22 04:07:09.049] [STEP ] ▶ Verify 3 stars are in full state
+[2026-04-22 04:07:09.065] [INFO ] Rating after clicking 3rd star: 3
+[2026-04-22 04:07:09.069] [STEP ] ▶ Verify cards are loaded
+[2026-04-22 04:07:09.076] [INFO ] Cards with rating >= 3: 20

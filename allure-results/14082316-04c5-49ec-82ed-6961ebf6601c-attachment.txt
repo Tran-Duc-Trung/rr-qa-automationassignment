@@ -1,0 +1,4 @@
+[2026-04-21 18:04:43.473] [STEP ] ▶ Select genre: Action
+[2026-04-21 18:04:43.945] [INFO ] Selected: "Action"
+[2026-04-21 18:04:44.254] [STEP ] ▶ Select genre: Adventure
+[2026-04-21 18:04:44.786] [INFO ] Selected: "Action"

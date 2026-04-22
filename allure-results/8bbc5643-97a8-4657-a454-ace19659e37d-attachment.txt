@@ -1,0 +1,2 @@
+[2026-04-22 04:52:49.278] [STEP ] ▶ Set year range 2010–2020
+[2026-04-22 04:53:11.450] [INFO ] Year range confirmed: 2020–2025

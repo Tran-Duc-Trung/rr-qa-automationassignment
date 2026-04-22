@@ -1,0 +1,30 @@
+{
+  "name": "rr-qa-automationassignment",
+  "version": "1.0.0",
+  "description": "QA Automation Assignment - TMDB Discover",
+  "type": "module",
+  "scripts": {
+    "test":            "playwright test",
+    "test:headed":     "playwright test --headed",
+    "test:debug":      "playwright test --debug",
+    "test:category":   "playwright test tests/ui/category.spec.js",
+    "test:search":     "playwright test tests/ui/search.spec.js",
+    "test:type":       "playwright test tests/ui/type.spec.js",
+    "test:genre":      "playwright test tests/ui/genre.spec.js",
+    "test:year":       "playwright test tests/ui/year.spec.js",
+    "test:rating":     "playwright test tests/ui/rating.spec.js",
+    "test:pagination": "playwright test tests/ui/pagination.spec.js",
+    "test:api":        "playwright test tests/api/network.spec.js",
+    "test:ui":         "playwright test tests/ui/",
+    "report:html":     "playwright show-report",
+    "report:allure":   "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "allure-commandline": "^2.27.0",
+    "allure-playwright": "^3.0.0"
+  },
+  "dependencies": {
+    "winston": "^3.13.0"
+  }
+}

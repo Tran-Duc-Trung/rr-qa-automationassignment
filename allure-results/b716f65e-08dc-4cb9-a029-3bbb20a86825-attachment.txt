@@ -1,0 +1,4 @@
+[2026-04-21 17:03:51.863] [STEP ] ▶ Capture initial card count
+[2026-04-21 17:03:51.871] [STEP ] ▶ Select "Action" genre
+[2026-04-21 17:03:52.990] [STEP ] ▶ Verify Genre shows "Action"
+[2026-04-21 17:03:53.001] [INFO ] Selected genre: "1900"

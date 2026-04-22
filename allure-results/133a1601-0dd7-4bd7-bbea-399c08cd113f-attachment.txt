@@ -1,0 +1,4 @@
+[2026-04-22 15:19:56.598] [STEP ] ▶ Set year range 2010–2020
+[2026-04-22 15:19:57.545] [INFO ] Year range confirmed: 2010–2020
+[2026-04-22 15:19:57.760] [INFO ] Cards in range 2010–2020: 20
+[2026-04-22 15:19:57.762] [INFO ] All cards within year range: false
