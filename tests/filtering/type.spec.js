@@ -11,12 +11,14 @@ test.describe('Type Filter (Movie / TV Shows)', () => {
   });
 
   test('TC-TYP-01: Default Type is "Movie" on page load', async () => {
+    // Verify "Movie" is the default selected type when page loads
     const selectedType = await homePage.getSelectedType();
     logger.info(`Default type: "${selectedType}"`);
     expect(selectedType).toBe(TYPES.MOVIE.label);
   });
 
   test('TC-TYP-02: Type dropdown opens and shows both options', async () => {
+    // Verify dropdown contains exactly 2 options: Movie and TV Shows
     await homePage.page.locator('p:has-text("Type") + div [class*="-control"]').click();
 
     await expect(homePage.page.locator(`#${TYPES.MOVIE.optionId}`)).toBeVisible();
@@ -24,6 +26,7 @@ test.describe('Type Filter (Movie / TV Shows)', () => {
   });
 
   test('TC-TYP-03: Selecting "TV Shows" updates content', async () => {
+    // Verify switching to TV Shows loads different content from Movie
     const movieTitles = (await homePage.getAllCardData()).map(c => c.title);
 
     await homePage.selectType(TYPES.TV_SHOWS);
@@ -41,6 +44,7 @@ test.describe('Type Filter (Movie / TV Shows)', () => {
   });
 
   test('TC-TYP-04: Switching from TV Shows back to Movie restores movie content', async () => {
+    // Verify switching back to Movie loads different content from TV Shows
     await homePage.selectType(TYPES.TV_SHOWS);
     const tvTitles = (await homePage.getAllCardData()).map(c => c.title);
 
@@ -58,6 +62,7 @@ test.describe('Type Filter (Movie / TV Shows)', () => {
   });
 
   test('TC-TYP-05: Type filter persists when switching Category tabs', async () => {
+    // Verify selected type is not reset when user switches between category tabs
     await homePage.selectType(TYPES.TV_SHOWS);
     await homePage.selectCategory(CATEGORIES.TREND);
 
@@ -68,18 +73,20 @@ test.describe('Type Filter (Movie / TV Shows)', () => {
   });
 
   test('TC-TYP-06: Changing Type triggers correct API call', async () => {
+    // Verify switching to TV Shows triggers an API call to the /tv/ endpoint
     const calls = await homePage.collectApiCalls(async () => {
       await homePage.selectType(TYPES.TV_SHOWS);
     });
 
     expect(calls.length).toBeGreaterThan(0);
 
-    const url = calls[0].url;
-    logger.info(`API URL: ${url.href}`);
+    const tvCall = calls.find(call =>
+      call.url.pathname.includes('/tv/') ||
+      call.url.searchParams.get('type') === 'tv'
+    );
+    expect(tvCall).toBeDefined();
 
-    const isTvEndpoint = url.pathname.includes('/tv/') ||
-      url.searchParams.get('type') === 'tv';
-    logger.info(`TV endpoint called: ${isTvEndpoint}`);
-    expect(isTvEndpoint).toBe(true);
+    logger.info(`TV endpoint called: ${tvCall.url.pathname}`);
+    expect(tvCall.url.pathname).toContain('/tv/');
   });
 });

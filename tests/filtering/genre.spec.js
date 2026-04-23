@@ -11,8 +11,7 @@ test.describe('Genre Filter', () => {
   });
 
   test('TC-GNR-01: Genre dropdown shows placeholder "Select..." by default', async () => {
-    const placeholder = homePage.page.locator('p:has-text("Genre") + div [class*="-placeholder"]');
-    await expect(placeholder).toBeVisible();
+    await expect(homePage.page.locator('p:has-text("Genre") + div [class*="-placeholder"]')).toBeVisible();
   });
 
   test('TC-GNR-02: Genre dropdown opens and lists all 19 options', async () => {
@@ -21,7 +20,6 @@ test.describe('Genre Filter', () => {
     for (const genre of Object.values(GENRES)) {
       const option = homePage.page.locator('[class*="-menu"]').getByText(genre.label, { exact: true });
       await expect(option).toBeVisible();
-      logger.info(`Genre option visible: ${genre.label}`);
     }
   });
 
@@ -29,16 +27,11 @@ test.describe('Genre Filter', () => {
     await homePage.selectGenre(GENRES.ACTION);
 
     const selected = await homePage.getSelectedGenre();
-    logger.info(`Selected genre: "${selected}"`);
     expect(selected).toBe(GENRES.ACTION.label);
-
-    const filteredCount = await homePage.getCardCount();
-    logger.info(`Cards after Action filter: ${filteredCount}`);
-    expect(filteredCount).toBeGreaterThan(0);
 
     const cards = await homePage.getAllCardData();
     const actionCards = cards.filter(c => c.genre.includes('Action'));
-    logger.info(`Cards with Action genre in meta: ${actionCards.length} / ${cards.length}`);
+    logger.info(`Cards with Action genre: ${actionCards.length} / ${cards.length}`);
     expect(actionCards.length).toBeGreaterThan(0);
   });
 
@@ -86,8 +79,6 @@ test.describe('Genre Filter', () => {
         .filter({ hasText: genre.label });
 
       await expect(multiValueChip).toBeVisible();
-      logger.info(`Genre "${genre.label}" chip visible in control`);
-
       await homePage.page.waitForTimeout(300);
     }
   });
@@ -99,15 +90,12 @@ test.describe('Genre Filter', () => {
 
     expect(calls.length).toBeGreaterThan(0);
 
-    const firstCall = calls[0];
-    logger.info(`API params: ${firstCall.url.searchParams.toString()}`);
+    const genreCall = calls.find(call => call.url.searchParams.has('with_genres'));
+    expect(genreCall).toBeDefined();
 
-    const hasGenreParam = firstCall.url.searchParams.has('with_genres');
-    expect(hasGenreParam).toBe(true);
-
-    const genreValue = firstCall.url.searchParams.get('with_genres');
+    const genreValue = genreCall.url.searchParams.get('with_genres');
+    logger.info(`with_genres value: ${genreValue}`);
     expect(genreValue).not.toBeNull();
     expect(genreValue).not.toBe('');
-    logger.info(`with_genres value: ${genreValue}`);
   });
 });

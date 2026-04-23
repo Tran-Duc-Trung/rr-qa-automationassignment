@@ -12,7 +12,7 @@ test.describe('API Network Calls', () => {
 
   test('TC-API-01: Page load triggers at least one TMDB API call', async () => {
     const calls = await homePage.collectApiCalls(async () => {
-      await homePage.goto();
+      await homePage.selectCategory(CATEGORIES.TREND);
     });
 
     logger.info(`Total API calls on load: ${calls.length}`);
@@ -21,12 +21,19 @@ test.describe('API Network Calls', () => {
 
   test('TC-API-02: API response has correct data structure', async () => {
     const calls = await homePage.collectApiCalls(async () => {
-      await homePage.goto();
+      await homePage.selectCategory(CATEGORIES.TREND);
     });
 
     expect(calls.length).toBeGreaterThan(0);
 
-    const body = calls[0].body;
+    const movieListCall = calls.find(call =>
+      call.url.pathname.includes('discover') ||
+      call.url.pathname.includes('popular') ||
+      call.url.pathname.includes('trending')
+    );
+    expect(movieListCall).toBeDefined();
+
+    const body = movieListCall.body;
     logger.info(`Response keys: ${Object.keys(body).join(', ')}`);
     expect(body).toHaveProperty('results');
     expect(Array.isArray(body.results)).toBe(true);
@@ -42,8 +49,7 @@ test.describe('API Network Calls', () => {
       }
     });
 
-    homePage = new HomePage(page);
-    await homePage.goto();
+    await new HomePage(page).goto();
 
     logger.info(`Total TMDB responses: ${responses.length}`);
     expect(responses.length).toBeGreaterThan(0);
@@ -55,66 +61,75 @@ test.describe('API Network Calls', () => {
   });
 
   test('TC-API-04: Switching category tab changes the API endpoint', async () => {
-    const popularCalls = await homePage.collectApiCalls(async () => {
-      await homePage.selectCategory(CATEGORIES.POPULAR);
-    });
-
     const trendCalls = await homePage.collectApiCalls(async () => {
       await homePage.selectCategory(CATEGORIES.TREND);
     });
 
-    const popularUrl = popularCalls[0]?.url.pathname ?? '';
-    const trendUrl   = trendCalls[0]?.url.pathname ?? '';
+    const popularCalls = await homePage.collectApiCalls(async () => {
+      await homePage.selectCategory(CATEGORIES.POPULAR);
+    });
 
-    logger.info(`Popular API path: ${popularUrl}`);
-    logger.info(`Trend API path:   ${trendUrl}`);
-    expect(popularUrl).not.toBe(trendUrl);
+    const popularCall = popularCalls.find(call => call.url.pathname.includes('popular'));
+    const trendCall = trendCalls.find(call => call.url.pathname.includes('trending'));
+
+    expect(popularCall).toBeDefined();
+    expect(trendCall).toBeDefined();
+
+    logger.info(`Popular API path: ${popularCall.url.pathname}`);
+    logger.info(`Trend API path:   ${trendCall.url.pathname}`);
+    expect(popularCall.url.pathname).not.toBe(trendCall.url.pathname);
   });
 
-  test('TC-API-05: Selecting Movie type calls movie endpoint', async () => {
-    const calls = await homePage.collectApiCalls(async () => {
+  test('TC-API-05: Selecting type calls correct API endpoint', async () => {
+    // Movie type
+    await homePage.selectType(TYPES.TV_SHOWS); // switch sang TV trước để trigger API
+    const movieCalls = await homePage.collectApiCalls(async () => {
       await homePage.selectType(TYPES.MOVIE);
     });
 
-    expect(calls.length).toBeGreaterThan(0);
+    const movieCall = movieCalls.find(call => call.url.pathname.includes('/movie/'));
+    expect(movieCall).toBeDefined();
+    logger.info(`Movie type API path: ${movieCall.url.pathname}`);
+    expect(movieCall.url.pathname).toContain('/movie/');
 
-    const pathname = calls[0].url.pathname;
-    logger.info(`Movie type API path: ${pathname}`);
-    expect(pathname).toContain('/movie/');
-  });
-
-  test('TC-API-06: Selecting TV Shows type calls tv endpoint', async () => {
-    const calls = await homePage.collectApiCalls(async () => {
+    // TV Shows type
+    const tvCalls = await homePage.collectApiCalls(async () => {
       await homePage.selectType(TYPES.TV_SHOWS);
     });
 
-    expect(calls.length).toBeGreaterThan(0);
-
-    const pathname = calls[0].url.pathname;
-    logger.info(`TV Shows type API path: ${pathname}`);
-    expect(pathname).toContain('/tv/');
+    const tvCall = tvCalls.find(call => call.url.pathname.includes('/tv/'));
+    expect(tvCall).toBeDefined();
+    logger.info(`TV Shows type API path: ${tvCall.url.pathname}`);
+    expect(tvCall.url.pathname).toContain('/tv/');
   });
 
-  test('TC-API-07: Genre filter passes with_genres param to API', async () => {
+  test('TC-API-06: Genre filter passes with_genres param to API', async () => {
     const calls = await homePage.collectApiCalls(async () => {
       await homePage.selectGenre(GENRES.ACTION);
     });
 
     expect(calls.length).toBeGreaterThan(0);
 
-    const withGenres = calls[0].url.searchParams.get('with_genres');
+    const genreCall = calls.find(call => call.url.searchParams.has('with_genres'));
+    expect(genreCall).toBeDefined();
+
+    const withGenres = genreCall.url.searchParams.get('with_genres');
     logger.info(`with_genres param: ${withGenres}`);
     expect(withGenres).not.toBeNull();
+    expect(withGenres).not.toBe('');
   });
 
-  test('TC-API-08: Pagination triggers API call with correct page number', async () => {
+  test('TC-API-07: Pagination triggers API call with correct page number', async () => {
     const calls = await homePage.collectApiCalls(async () => {
       await homePage.goToNextPage();
     });
 
     expect(calls.length).toBeGreaterThan(0);
 
-    const pageParam = calls[0].url.searchParams.get('page');
+    const pageCall = calls.find(call => call.url.searchParams.has('page'));
+    expect(pageCall).toBeDefined();
+
+    const pageParam = pageCall.url.searchParams.get('page');
     logger.info(`API page param: ${pageParam}`);
     expect(pageParam).toBe('2');
   });

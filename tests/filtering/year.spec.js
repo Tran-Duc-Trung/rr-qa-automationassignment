@@ -66,7 +66,7 @@ test.describe('Year Filter', () => {
 
   test('TC-YR-05: Selecting a year range (2010–2020) returns relevant results', async () => {
     const fromYear = 2010;
-    const toYear   = 2020;
+    const toYear = 2020;
 
     await homePage.selectYearRange(fromYear, toYear);
 
@@ -86,14 +86,18 @@ test.describe('Year Filter', () => {
     expect(allInRange).toBe(true);
   });
 
-  test('TC-YR-06 [NEGATIVE]: Inverted range (From > To) — observe behaviour', async () => {
+  test('TC-YR-06 [NEGATIVE]: Inverted range (From > To) is not allowed', async () => {
+    const { from: originalFrom, to: originalTo } = await homePage.getSelectedYears();
+
     await homePage.selectYearFrom(2024);
     await homePage.selectYearTo(2000);
+
     await homePage.page.waitForTimeout(1500);
 
     const { from, to } = await homePage.getSelectedYears();
-    const cardCount = await homePage.getCardCount();
-    logger.warn(`[NEGATIVE] From: ${from}, To: ${to} — cards: ${cardCount}`);
+    logger.info(`After inverted range — From: ${from}, To: ${to}`);
+
+    expect(parseInt(from)).toBeLessThan(parseInt(to));
   });
 
   test('TC-YR-07: Changing year triggers API call with year params', async () => {
@@ -103,13 +107,17 @@ test.describe('Year Filter', () => {
 
     expect(calls.length).toBeGreaterThan(0);
 
-    const params = calls[0].url.searchParams;
-    const hasYearParam =
-      params.has('primary_release_date.gte') ||
-      params.has('first_air_date.gte') ||
-      params.has('year');
+    const yearCall = calls.find(call =>
+      call.url.searchParams.has('release_date.gte') ||
+      call.url.searchParams.has('release_date.lte')
+    );
+    expect(yearCall).toBeDefined();
 
+    const params = yearCall.url.searchParams;
     logger.info(`All params: ${params.toString()}`);
-    expect(hasYearParam).toBe(true);
+    expect(
+      params.has('release_date.gte') ||
+      params.has('release_date.lte')
+    ).toBe(true);
   });
 });
