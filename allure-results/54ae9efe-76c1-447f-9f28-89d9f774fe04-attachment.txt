@@ -1,5 +1,0 @@
-[2026-04-22 04:20:39.368] [STEP ] ▶ Search for keyword: "Avatar"
-[2026-04-22 04:20:39.500] [STEP ] ▶ Verify at least one card is returned
-[2026-04-22 04:20:39.505] [INFO ] Cards found for "Avatar": 20
-[2026-04-22 04:20:39.507] [STEP ] ▶ Verify returned card titles contain the keyword
-[2026-04-22 04:20:39.706] [INFO ] All titles match keyword: false

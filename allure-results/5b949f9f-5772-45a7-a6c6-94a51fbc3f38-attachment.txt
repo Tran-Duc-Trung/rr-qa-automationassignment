@@ -1,1 +1,0 @@
-[2026-04-22 03:40:27.029] [STEP ] ▶ Capture API call when setting rating to 4

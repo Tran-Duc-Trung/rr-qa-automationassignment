@@ -1,4 +1,0 @@
-[2026-04-22 04:50:27.424] [STEP ] ▶ Open Year From dropdown
-[2026-04-22 04:50:27.514] [STEP ] ▶ Verify first option is 1900
-[2026-04-22 04:50:27.529] [STEP ] ▶ Scroll to verify last option is 2025
-[2026-04-22 04:50:27.617] [INFO ] Year From range confirmed: 1900–2025 (126 options)

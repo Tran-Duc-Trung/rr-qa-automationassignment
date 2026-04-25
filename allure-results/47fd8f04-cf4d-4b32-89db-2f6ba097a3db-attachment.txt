@@ -1,4 +1,0 @@
-[2026-04-22 04:47:01.804] [STEP ] ▶ Click Type dropdown to open it
-[2026-04-22 04:47:01.917] [STEP ] ▶ Verify "Movie" option is visible
-[2026-04-22 04:47:01.930] [STEP ] ▶ Verify "TV Shows" option is visible
-[2026-04-22 04:47:01.936] [INFO ] Both Type options are visible in dropdown

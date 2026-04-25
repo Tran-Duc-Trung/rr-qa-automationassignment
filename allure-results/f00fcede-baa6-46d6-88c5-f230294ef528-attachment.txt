@@ -1,5 +1,0 @@
-[2026-04-22 04:47:22.844] [STEP ] ▶ Switch to TV Shows
-[2026-04-22 04:47:23.326] [STEP ] ▶ Switch back to Movie
-[2026-04-22 04:47:23.454] [STEP ] ▶ Verify selected type is "Movie"
-[2026-04-22 04:47:23.459] [STEP ] ▶ Verify movie cards are loaded
-[2026-04-22 04:47:23.594] [INFO ] Movie type restored different content: true

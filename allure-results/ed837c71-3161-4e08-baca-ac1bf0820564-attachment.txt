@@ -1,2 +1,0 @@
-[2026-04-22 04:51:44.525] [STEP ] ▶ Set Year To to 2015
-[2026-04-22 04:52:05.582] [INFO ] Year To after selection: 2025

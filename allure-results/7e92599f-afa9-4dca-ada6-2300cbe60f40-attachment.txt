@@ -1,4 +1,0 @@
-[2026-04-21 17:35:41.260] [STEP ] ▶ Select "Drama" genre
-[2026-04-21 17:35:42.290] [STEP ] ▶ Switch to "Newest" category
-[2026-04-21 17:35:43.229] [STEP ] ▶ Verify "Drama" is still selected
-[2026-04-21 17:35:43.244] [INFO ] Genre after category switch: "Drama"

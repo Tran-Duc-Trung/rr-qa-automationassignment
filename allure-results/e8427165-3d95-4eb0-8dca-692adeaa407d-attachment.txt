@@ -1,3 +1,0 @@
-[2026-04-22 04:23:40.269] [STEP ] ▶ Type characters one by one and check results change
-[2026-04-22 04:23:40.677] [INFO ] Results after "Av": 20
-[2026-04-22 04:23:40.874] [INFO ] Results after "Ava": 20

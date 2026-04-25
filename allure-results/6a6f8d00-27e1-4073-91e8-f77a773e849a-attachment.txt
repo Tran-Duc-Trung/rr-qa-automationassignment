@@ -1,5 +1,0 @@
-[2026-04-21 04:38:23.263] [STEP ] ▶ Verify all 4 category links are present
-[2026-04-21 04:38:23.271] [INFO ] Tab visible: Popular
-[2026-04-21 04:38:23.277] [INFO ] Tab visible: Trend
-[2026-04-21 04:38:23.283] [INFO ] Tab visible: Newest
-[2026-04-21 04:38:23.288] [INFO ] Tab visible: Top rated

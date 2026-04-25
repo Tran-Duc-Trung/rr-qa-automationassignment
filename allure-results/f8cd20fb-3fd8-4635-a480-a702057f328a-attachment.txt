@@ -1,4 +1,0 @@
-[2026-04-22 15:23:06.296] [STEP ] ▶ Count cards on page 1
-[2026-04-22 15:23:06.302] [INFO ] Cards on page 1: 20
-[2026-04-22 15:23:06.304] [STEP ] ▶ Navigate to page 2 and count cards
-[2026-04-22 15:23:07.096] [INFO ] Cards on page 2: 20

@@ -1,2 +1,0 @@
-[2026-04-21 17:43:52.735] [STEP ] ▶ Select "TV Shows" type
-[2026-04-21 17:43:53.160] [STEP ] ▶ Select "Animation" genre

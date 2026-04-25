@@ -1,5 +1,0 @@
-[2026-04-22 04:47:32.572] [STEP ] ▶ Select "TV Shows" type
-[2026-04-22 04:47:33.018] [STEP ] ▶ Switch to "Trend" category
-[2026-04-22 04:47:34.440] [STEP ] ▶ Verify type is still "TV Shows" after category change
-[2026-04-22 04:47:34.445] [INFO ] Type after category switch: "TV Shows"
-[2026-04-22 04:47:34.451] [INFO ] Cards for TV Shows + Trend: 20

@@ -1,2 +1,0 @@
-[2026-04-22 04:23:15.474] [STEP ] ▶ Search with nonsense keyword: "XYZXYZXYZ_NO_MATCH_123"
-[2026-04-22 04:23:17.585] [INFO ] Cards for non-existent search: 0

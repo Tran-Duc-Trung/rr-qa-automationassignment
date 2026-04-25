@@ -1,4 +1,0 @@
-[2026-04-22 15:23:31.060] [STEP ] ▶ Capture last page number from pagination
-[2026-04-22 15:23:31.064] [INFO ] Last page number shown: 56316
-[2026-04-22 15:23:31.065] [STEP ] ▶ Attempt to click the last page number
-[2026-04-22 15:23:33.129] [WARN ] [KNOWN BUG] Cards on last page: 0

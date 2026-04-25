@@ -1,2 +1,0 @@
-[2026-04-22 14:58:47.228] [STEP ] ▶ Verify default Year From and Year To values
-[2026-04-22 14:58:47.275] [INFO ] Default year range: 1900 – 2025

@@ -1,4 +1,0 @@
-[2026-04-22 15:20:31.704] [STEP ] ▶ Collect API calls when changing Year From to 2022
-[2026-04-22 15:20:32.724] [INFO ] API URL: https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&release_date.gte=2022-01-01&release_date.lte=2026-12-31&vote_average.gte=0&vote_average.lte=5&page=1&with_genres=&api_key=add494e96808c55b3ee7f940c9d5e5b6
-[2026-04-22 15:20:32.725] [INFO ] API has year param: false
-[2026-04-22 15:20:32.725] [INFO ] All params: sort_by=popularity.desc&release_date.gte=2022-01-01&release_date.lte=2026-12-31&vote_average.gte=0&vote_average.lte=5&page=1&with_genres=&api_key=add494e96808c55b3ee7f940c9d5e5b6

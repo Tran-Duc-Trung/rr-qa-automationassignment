@@ -1,3 +1,0 @@
-[2026-04-22 04:23:57.443] [STEP ] ▶ Search with special characters: "!@#$%^&*()"
-[2026-04-22 04:23:59.017] [STEP ] ▶ Verify page is still functional (nav is visible)
-[2026-04-22 04:23:59.033] [INFO ] Cards after special char search: 0

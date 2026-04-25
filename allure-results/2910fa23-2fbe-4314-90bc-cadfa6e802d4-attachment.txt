@@ -1,2 +1,0 @@
-[2026-04-22 03:33:55.659] [INFO ] API params: sort_by=popularity.desc&release_date.gte=1900-01-01&release_date.lte=2026-12-31&vote_average.gte=0&vote_average.lte=5&page=1&with_genres=53&api_key=add494e96808c55b3ee7f940c9d5e5b6
-[2026-04-22 03:33:55.664] [INFO ] with_genres value: 53

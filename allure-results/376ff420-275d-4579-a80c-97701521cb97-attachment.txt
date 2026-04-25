@@ -1,3 +1,0 @@
-[2026-04-22 04:12:08.769] [STEP ] ▶ Click left half of 3rd star to set 2.5 rating
-[2026-04-22 04:12:09.050] [INFO ] Rating after clicking half star: 2.5
-[2026-04-22 04:12:09.054] [INFO ] Cards with rating >= 2.5: 20

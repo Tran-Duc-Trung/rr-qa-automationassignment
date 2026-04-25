@@ -1,4 +1,0 @@
-[2026-04-22 03:25:09.660] [STEP ] ▶ Collect API calls when selecting "Thriller" genre
-[2026-04-22 03:25:10.214] [INFO ] API endpoint: /3/discover/movie
-[2026-04-22 03:25:10.215] [INFO ] API params: sort_by=popularity.desc&release_date.gte=1900-01-01&release_date.lte=2026-12-31&vote_average.gte=0&vote_average.lte=5&page=1&with_genres=53&api_key=add494e96808c55b3ee7f940c9d5e5b6
-[2026-04-22 03:25:10.215] [INFO ] API includes genre param: true

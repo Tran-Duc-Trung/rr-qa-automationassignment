@@ -1,2 +1,0 @@
-[2026-04-21 04:14:04.396] [STEP ] ▶ Verify "Popular" tab is active by default
-[2026-04-21 04:14:04.443] [INFO ] Cards loaded on Popular tab: 20

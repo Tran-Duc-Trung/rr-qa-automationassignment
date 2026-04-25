@@ -1,3 +1,0 @@
-[2026-04-22 15:14:54.453] [STEP ] ▶ Set both From and To to 2023
-[2026-04-22 15:14:55.420] [INFO ] Cards for year 2023 only: 20
-[2026-04-22 15:14:55.425] [INFO ] All cards are from year 2023: false

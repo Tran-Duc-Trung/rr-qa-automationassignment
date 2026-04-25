@@ -1,2 +1,0 @@
-[2026-04-22 04:46:48.830] [STEP ] ▶ Verify default selected Type is "Movie"
-[2026-04-22 04:46:48.843] [INFO ] Default type: "Movie"

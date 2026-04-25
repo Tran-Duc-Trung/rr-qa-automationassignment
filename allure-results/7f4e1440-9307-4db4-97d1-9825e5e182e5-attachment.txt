@@ -1,2 +1,0 @@
-[2026-04-22 15:22:43.613] [STEP ] ▶ Click page 3 directly
-[2026-04-22 15:22:45.038] [INFO ] After clicking page 3 — current page: 3

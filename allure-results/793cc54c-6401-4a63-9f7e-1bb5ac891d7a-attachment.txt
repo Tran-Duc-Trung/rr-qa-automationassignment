@@ -1,2 +1,0 @@
-[2026-04-22 15:22:02.728] [STEP ] ▶ Verify "Next" button is enabled on page 1
-[2026-04-22 15:22:02.733] [INFO ] Next disabled: false

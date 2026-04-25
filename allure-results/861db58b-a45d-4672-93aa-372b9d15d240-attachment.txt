@@ -1,4 +1,0 @@
-[2026-04-21 17:36:56.199] [STEP ] ▶ Select "TV Shows" type
-[2026-04-21 17:36:56.690] [STEP ] ▶ Select "Animation" genre
-[2026-04-21 17:36:57.684] [INFO ] Cards for TV Shows + Animation: 20
-[2026-04-21 17:36:57.717] [INFO ] Active filters — Type: "TV Shows", Genre: "Comedy"

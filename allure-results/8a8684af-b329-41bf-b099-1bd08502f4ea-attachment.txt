@@ -1,4 +1,0 @@
-[2026-04-22 15:23:19.733] [STEP ] ▶ Navigate to page 2
-[2026-04-22 15:23:21.046] [STEP ] ▶ Apply a Genre filter
-[2026-04-22 15:23:22.003] [STEP ] ▶ Verify pagination has reset to page 1
-[2026-04-22 15:23:22.526] [INFO ] Page after filter change: 1

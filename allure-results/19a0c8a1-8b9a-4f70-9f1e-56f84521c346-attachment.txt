@@ -1,8 +1,0 @@
-[2026-04-21 17:34:06.200] [STEP ] ▶ Capture initial card count
-[2026-04-21 17:34:06.209] [STEP ] ▶ Select "Action" genre
-[2026-04-21 17:34:06.640] [STEP ] ▶ Verify Genre shows "Action"
-[2026-04-21 17:34:06.653] [INFO ] Selected genre: "Action"
-[2026-04-21 17:34:06.657] [STEP ] ▶ Verify cards are loaded
-[2026-04-21 17:34:06.664] [INFO ] Cards after Action filter: 20
-[2026-04-21 17:34:06.667] [STEP ] ▶ Verify card meta contains "Action"
-[2026-04-21 17:34:06.916] [INFO ] Cards with Action genre in meta: 13 / 20

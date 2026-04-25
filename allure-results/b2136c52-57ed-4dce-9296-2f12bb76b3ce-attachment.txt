@@ -1,3 +1,0 @@
-[2026-04-22 15:22:17.930] [STEP ] ▶ Navigate to page 2
-[2026-04-22 15:22:19.352] [STEP ] ▶ Verify "Previous" is now enabled
-[2026-04-22 15:22:19.357] [INFO ] Previous disabled on page 2: false

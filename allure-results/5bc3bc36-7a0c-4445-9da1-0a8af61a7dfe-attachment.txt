@@ -1,6 +1,0 @@
-[2026-04-22 15:00:14.423] [STEP ] ▶ Set Year From to 2020
-[2026-04-22 15:00:15.595] [INFO ] Year From after selection: 2020
-[2026-04-22 15:00:15.599] [STEP ] ▶ Verify cards are still loaded
-[2026-04-22 15:00:15.609] [INFO ] Cards after Year From 2020: 20
-[2026-04-22 15:00:15.613] [STEP ] ▶ Verify all card years are >= fromYear
-[2026-04-22 15:00:15.880] [INFO ] All cards have year >= 2020: false

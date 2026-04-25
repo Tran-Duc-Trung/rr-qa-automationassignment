@@ -1,3 +1,0 @@
-[2026-04-22 04:12:45.322] [STEP ] ▶ Set maximum rating of 5 stars
-[2026-04-22 04:12:46.744] [INFO ] Max rating set: 5
-[2026-04-22 04:12:46.749] [INFO ] Cards with rating = 5: 20

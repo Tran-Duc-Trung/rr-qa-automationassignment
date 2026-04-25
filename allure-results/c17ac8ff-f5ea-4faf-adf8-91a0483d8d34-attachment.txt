@@ -1,3 +1,0 @@
-[2026-04-22 04:11:28.159] [STEP ] ▶ Verify all stars are in "zero" state by default
-[2026-04-22 04:11:28.169] [INFO ] Default rating value: 0
-[2026-04-22 04:11:28.184] [INFO ] Stars in zero state: 5
